@@ -24,7 +24,7 @@ def delay():
     time.sleep(random.randint(2 , 4))
 
 
-# This function introduces a random delay between 2 to 4 seconds.
+# This function introduces a random delay between 2 and 4 seconds.
 # It is used to simulate waiting for a page or element to load, but this approach can be unreliable.
 # A better alternative would be to use WebDriver's explicit or implicit waits.
 
