@@ -35,8 +35,6 @@ class ChromeTests(unittest.TestCase):
     # Set up the test environment
     def setUp(self):
         print("Setting up resources...")
-        # Print a message to indicate the setup stage of the test environment.
-
         service = ChromeService(ChromeDriverManager().install())
         # Initialize a service instance for the Chrome WebDriver.
         # `ChromeDriverManager().install()` downloads the appropriate driver version.
@@ -44,9 +42,6 @@ class ChromeTests(unittest.TestCase):
         options = webdriver.ChromeOptions()
         # Create an instance of ChromeOptions to modify browser settings during WebDriver initialization.
 
-        options.page_load_strategy = 'eager'
-        # Set the page load strategy to 'eager', meaning Selenium will return control
-        # as soon as the DOM content is loaded, without waiting for additional JavaScript or images.
 
         self.driver = webdriver.Chrome(service=service, options=options)
         # Start a Chrome WebDriver instance with the specified service and options.
